@@ -25,7 +25,7 @@ class SchoolClass {
             int n = students.size();
             Student temp;
             for (int i = 0; i < n - 1; i++) {
-                swapped = false;
+                bool swapped = false;
                 for (int j = 0; j < n - i - 1; j++) {
                     if (students[j].compareTo(students[j + 1]) > 0) {
                         temp = students[j];
@@ -95,7 +95,7 @@ class SchoolClass {
         }
 
         std::string toString() const {
-            return name + "\n"
+            return name + "\n";
         }
 };
 
