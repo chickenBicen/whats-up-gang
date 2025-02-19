@@ -1,0 +1,45 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "C:\\Users\\ruben\\SFML\\SFML-3.0.0\\include"               // Path to SFML includes
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "C:\\MinGW\\bin\\g++.exe",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
+        }
+    ],
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build SFML project",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-g",
+                "${file}",
+                "C:\\Users\\ruben\\SFML\\SFML-3.0.0\\include",               // Path to SFML includes
+                "C:\\Users\\ruben\\SFML\\SFML-3.0.0\\lib",                   // Path to SFML lib files
+                "-lsfml-graphics",                 // Linking SFML graphics library
+                "-lsfml-window",                   // Linking SFML window library
+                "-lsfml-system",                   // Linking SFML system library
+                "-o",
+                "${fileDirname}/${fileBasenameNoExtension}.exe"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": ["$gcc"],
+            "detail": "Generated task for SFML project"
+        }
+    ]
+}

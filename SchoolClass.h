@@ -17,7 +17,7 @@ class SchoolClass {
 
         SchoolClass(std::string name) : name(name), students() {}
 
-        vector<Student> getStudents() const {
+        std::vector<Student> getStudents() const {
             return students;
         }
 
