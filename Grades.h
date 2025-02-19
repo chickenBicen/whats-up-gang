@@ -45,6 +45,7 @@ class Grades{
         }
 
         double getLowGrade() const {
+            if (grades.empty()) return 0.0;
             double low = grades[0].getValue();
             for(Grade grade : grades){
                 if(grade.getValue() < low){
@@ -55,6 +56,7 @@ class Grades{
         }
 
         double getHighGrade() const {
+            if (grades.empty()) return 0.0;
             double high = grades[0].getValue();
             for(Grade grade : grades){
                 if(grade.getValue() > high){
